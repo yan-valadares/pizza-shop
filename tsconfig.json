@@ -27,6 +27,6 @@
       ]
     }
   },
-  "include": ["src"],
+  "include": ["src", "month-orders-amount-card.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
