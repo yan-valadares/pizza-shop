@@ -20,7 +20,7 @@ import { OrderTableSkeleton } from './order-table-skeleton'
 export function Orders() {
   const [searchParams, setSearchParams] = useSearchParams()
 
-  const orderId = searchParams.get('oderId')
+  const orderId = searchParams.get('orderId')
   const customerName = searchParams.get('customerName')
   const status = searchParams.get('status')
 

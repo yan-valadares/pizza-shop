@@ -25,7 +25,7 @@ type OrderFilterSchema = z.infer<typeof orderFilterSchema>
 export function OrderTableFilters() {
   const [searchParams, setSearchParams] = useSearchParams()
 
-  const orderId = searchParams.get('oderId')
+  const orderId = searchParams.get('orderId')
   const customerName = searchParams.get('customerName')
   const status = searchParams.get('status')
 

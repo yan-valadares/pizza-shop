@@ -28,6 +28,6 @@
       ]
     }
   },
-  "include": ["src", "month-orders-amount-card.tsx", "test"],
+  "include": ["src", "month-orders-amount-card.tsx", "test", "tests/setup.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

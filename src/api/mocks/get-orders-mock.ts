@@ -33,7 +33,7 @@ export const getOrdersMock = http.get<never, never, GetOrdersResponse>(
       : 0
 
     const customerName = searchParams.get('customerName')
-    const orderId = searchParams.get('oderId')
+    const orderId = searchParams.get('orderId')
     const status = searchParams.get('status')
 
     let filteredOrders = orders
