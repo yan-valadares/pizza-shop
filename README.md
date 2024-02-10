@@ -45,7 +45,7 @@ npx playwright test --ui
 
 #
 
-# Pages
+# Preview
 
 ## Dashboard
 <p align="center">
