@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import { enableMsw } from './api/mocks/index.ts'
-import { App } from './app.tsx'
+import { App } from './App.tsx'
 
 enableMsw().then(() => {
   ReactDOM.createRoot(document.getElementById('root')!).render(
