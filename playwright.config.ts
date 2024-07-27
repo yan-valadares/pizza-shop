@@ -1,21 +1,24 @@
-import { defineConfig } from '@playwright/test'
+import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
-  fullyParallel: true,
   testMatch: /.*\.e2e-spec\.ts$/,
+  fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   // reporter: 'html',
+
   use: {
     baseURL: 'http://localhost:50123',
+    trace: 'on-first-retry',
   },
+
   webServer: {
     command: 'npm run dev:test',
     url: 'http://localhost:50123',
     reuseExistingServer: !process.env.CI,
-  },
+  }
 
   // projects: [
   //   {
@@ -32,27 +35,6 @@ export default defineConfig({
   //     name: 'webkit',
   //     use: { ...devices['Desktop Safari'] },
   //   },
-
-  //   /* Test against mobile viewports. */
-  //   // {
-  //   //   name: 'Mobile Chrome',
-  //   //   use: { ...devices['Pixel 5'] },
-  //   // },
-  //   // {
-  //   //   name: 'Mobile Safari',
-  //   //   use: { ...devices['iPhone 12'] },
-  //   // },
-
-  //   /* Test against branded browsers. */
-  //   // {
-  //   //   name: 'Microsoft Edge',
-  //   //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
-  //   // },
-  //   // {
-  //   //   name: 'Google Chrome',
-  //   //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-  //   // },
   // ],
 
-  /* Run your local dev server before starting the tests */
-})
+});
